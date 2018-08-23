@@ -69,8 +69,18 @@ return {
   }
 }
 const state={
-    turnData: getTurnData(authors)
+    turnData: getTurnData(authors),
+    highlight: ''
 };
 
-ReactDOM.render(<AuthorQuiz {...state} />, document.getElementById('root'));
+function onAnswerSelected(answar){
+    const isCorrect = state.turnData.author.books.some((book) => book === answar);
+    state.highlight= isCorrect ? 'correct' : 'wrong';
+    render();
+}
+
+function render () {
+    ReactDOM.render(<AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />, document.getElementById('root'));
+}
+render();
 registerServiceWorker();
