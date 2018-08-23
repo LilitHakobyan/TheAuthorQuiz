@@ -9,9 +9,10 @@
 
 .authorimage {
   max-height: 100%;
+  width: 100%;
 }
 
-.answar {
+.answer {
   background-color: #F0F7FD;
   border-color: #D0E3F0;
   margin-bottom: 20px;
@@ -20,6 +21,6 @@
   cursor: pointer;
 }
 
-.answar:hover{
+.answer:hover{
   background-color: #D0E3F0;
 }
