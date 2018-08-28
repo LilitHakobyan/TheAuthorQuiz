@@ -56,7 +56,7 @@ function Hero () {
      <div className="row continue">
             { show 
               ? <div className="col-11" >
-                  <button className="btn btn-primary btn-lg float-right" value="Continue"  onClick={onContinue} />
+                  <input type="button" className="btn btn-primary btn-lg float-right" value="Continue"  onClick={onContinue} />
               </div>
              : null
             }
